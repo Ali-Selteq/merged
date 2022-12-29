@@ -32,7 +32,7 @@ const PicContainer = () => {
                 placeholder="Number"
               />
               <input
-                className={home.form__inputs}
+                className={home.form__inputs1}
                 type="text"
                 name="massage"
                 id="massage"
