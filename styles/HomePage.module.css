@@ -539,17 +539,32 @@ iframe#feature_video {
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
-.courses__videos::-webkit-scrollbar-thumb {
+/* .courses__videos::-webkit-scrollbar-thumb {
   background: #0c083b;
   border-radius: 30px;
-}
+} */
 .courses__videos::-webkit-scrollbar {
-  width: 2px;
-  height: 10px;
+  width: 102px;
+  height: 20px;
+  scroll-behavior: auto;
+}
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}
+
+.courses__videos::-webkit-scrollbar-button:single-button {
+  background-color: #0c083b;
+  display: block;
+  scroll-behavior: smooth;
+  height: 103px;
+  width: 16px;
 }
 .slider_wrapper {
   display: flex;
   transition: transform 0.6s ease;
+  animation: moveSlideshow 30s linear infinite;
 }
 
 .slider {
